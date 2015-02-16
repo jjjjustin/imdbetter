@@ -78,4 +78,13 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => "jjjjustin",
+    :access_key_id => Figaro.env.aws_key,
+    :secret_access_key => Figaro.env.aws_secret
+  }
+}
 end
