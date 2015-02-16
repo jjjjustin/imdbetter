@@ -1,10 +1,12 @@
-<h1>All posts</h1>
+<hr>
+<h1>Newest movies posted</h1>
+<hr>
 
 <ul class="users">
   <% @posts.each do |post| %>
     <li>
-      <strong><%= post.url %><strong>
-      <strong><%= post.description %><strong>
+      <strong><%= post.description %><strong> <br>
+      <strong><%= embed(post.url) %><strong> <br>
       <strong><%= post.poster_image %><strong>
     </li>
   <% end %>
