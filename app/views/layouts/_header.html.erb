@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path, class: "btn btn-lg btn-default" %></li>
+        <li><%= link_to 'New Post', new_post_path, class: "btn btn-lg btn-default" %></li>
+        <li><%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-default" %></li>
+        <li><%= link_to "Sign in", user_session_path, class: "btn btn-lg btn-default" %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, :method => :delete, class: "btn btn-lg btn-default" %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<button type="button" class="btn btn-default
